@@ -1,0 +1,22 @@
+.card {
+  transition: transform 0.2s ease-in-out;
+  border-radius: 8px;
+}
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.card .btn {
+  margin-top: 10px;
+}
+.card img {
+  object-fit: cover;
+  height: 200px;
+}
+/* 強制讓 hot-list 裡的圖片 hover 不會變化 */
+.hot-list img:hover {
+  opacity: 1 !important;
+  border: none !important;
+  transform: none !important;
+  transition: none !important;
+}
