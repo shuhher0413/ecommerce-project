@@ -1,69 +1,69 @@
-電商藥粧網站專案
-這是一個以 PHP 製作的簡易電商網站，主要功能包含會員註冊與登入、商品瀏覽、購物車、結帳、訂單查詢等。此專案為職訓課程結訓作品，用以練習網站後台開發及前端頁面設計。
+# 電商購物網站專案
 
-📌 專案特色
-🛒 完整購物車流程：加入商品、修改數量、刪除商品。
+這是一個使用 **PHP + MySQL + Bootstrap** 架設的電商購物網站，適合作為履歷作品或求職作品展示。
 
-📦 結帳功能：可選擇收件人地址、付款方式（貨到付款、信用卡、轉帳、電子支付）。
+## 🌐 線上展示
+- 網站網址：[https://www.mhmoney168.byethost6.com](https://www.mhmoney168.byethost6.com)
 
-🎫 折價券功能：可驗證折價券代碼並計算折扣。
+## 📦 功能總覽
+- 使用者註冊、登入、登出
+- 商品分類、列表、詳細瀏覽
+- 加入購物車、變更數量、移除商品
+- 收件人地址管理（新增/編輯/選擇）
+- 結帳流程包含多種付款方式：
+  - 貨到付款
+  - 信用卡
+  - 銀行轉帳
+  - 電子支付（保留項目）
+- 折價券套用機制
+- FAQ（常見問題）文章後台維護
+- 隱私權與退換貨說明頁面
 
-🔐 會員系統：註冊、登入、修改資料。
+## 🔧 安裝指南
+1. 將專案資料夾上傳至 PHP + MySQL 環境（建議使用 XAMPP 或遠端主機）。
+2. 使用 phpMyAdmin 匯入資料庫 SQL，包括 `users`、`product`、`cart`、`uorder`、`multiselect` 等表。
+3. 修改 `Connections/conn_db.php` 中的資料庫連線資訊（host、dbname、user、password）。
+4. 瀏覽首頁 `index.php`，即可體驗網站功能。
 
-📋 訂單查詢：可查詢歷史訂單並查看明細。
-
-📱 響應式設計：Bootstrap 版型支援桌機與手機。
-
-🗂 目錄結構
-bash
-複製
-編輯
+## 🗂 目錄結構（簡述）
 project01/
-├── index.php                  # 首頁
-├── login.php                   # 會員登入頁
-├── register.php                # 會員註冊頁
-├── checkout.php                # 結帳頁
-├── cart.php                    # 購物車頁
-├── orderlist.php               # 訂單查詢頁
-├── product_list.php            # 商品列表頁
-├── goods.php                   # 商品詳細頁
-├── addcart.php                 # 加入購物車處理
-├── addorder.php                # 建立訂單處理
-├── check_coupon.php            # 折價券驗證
-├── Connections/conn_db.php     # 資料庫連線設定
-├── images/                     # 圖片資料夾
-├── product_img/                # 商品圖片
-├── uploads/                    # 上傳資料夾
-├── style.css                   # 自訂樣式
-├── jsfile.php                  # 共用 JS 匯入
-└── README.md                   # 專案說明文件
+├── about.php
+├── addcart.php
+├── checkout.php
+├── Connections/
+│ └── conn_db.php
+├── product_img/
+├── images/
+├── jsfile.php、php_lib.php…
+├── faq.php、faq_admin.php
+├── return_policy.php、privacy.php
+└── …其餘頁面與管理功能
 
+## 🔍 畫面預覽
+- 首頁輪播、商品分類、搜尋功能
+- 購物車頁面、結帳頁面（付款方式選擇、地址 modal）
+- FAQ 後台管理介面（可新增/修改/停用 FAQ）
+- 會員中心：訂單查詢、訂單明細 view
 
-首頁
+## 💡 技術亮點
+- 使用 Bootstrap 建立 RWD 反應式網頁
+- 使用 PDO 與 MySQL 建立安全資料存取
+- 購物車與訂單系統整合範本程式，並根據作業需求加以客製
+- FAQ、折價券為後台可編輯的動態功能
+- 可擴充：信用卡串接、電子支付 API 整合
 
-商品列表
+---
 
-購物車
+📌 **專案狀態**  
+目前功能完整，可操作網站所有流程，尚可強化：  
+- 資安防護（CSRF、XSS）；  
+- 完整付款串接；  
+- 後台管理介面更完善。
 
-結帳頁
+---
 
-訂單查詢
+## 🚀 使用建議
+- 將這份 README 放到 GitHub 根目錄，並加上首頁網站截圖更吸睛
+- 可以在履歷/LinkedIn 增加 demo 網站連結，讓面試官點擊體驗
+- 有時間可以補上 Github Pages 或 Heroku 部署連結
 
-⚙ 使用技術
-前端：HTML / CSS / Bootstrap / jQuery
-
-後端：PHP 7.x
-
-資料庫：MySQL
-
-伺服環境：XAMPP (本機測試環境)
-
-🚀 如何執行
-1️⃣ 安裝 XAMPP 或其他 PHP + MySQL 環境
-2️⃣ 匯入資料庫 SQL 檔案（可提供或自行建立）
-3️⃣ 將專案放到 htdocs 目錄下
-4️⃣ 瀏覽器開啟 http://localhost/project01/index.php 開始使用
-
-🙋 作者與說明
-此專案為職訓中心課程成果作品，用於學習、履歷展示與求職用途，非正式商業網站。
-GitHub 專案網址：https://github.com/shuhher0413/ecommerce-project
